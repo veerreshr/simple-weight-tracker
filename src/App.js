@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import LoginScreen from "./screens/LoginScreen";
+import { useEffect } from "react";
+import firebase from "firebase/app";
+import { useStoreActions } from "easy-peasy";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import NavBar from "./components/NavBar";
+import HomeScreen from "./screens/HomeScreen";
+import Copyright from "./components/Copyright";
 
 function App() {
+  const signin = useStoreActions((actions) => actions.auth.signin);
+  const signout = useStoreActions((actions) => actions.auth.signout);
+  useEffect(() => {
+    firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        let uid = user.uid;
+        signin(uid);
+      } else {
+        signout();
+      }
+    });
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <NavBar />
+      <Route path="/" exact component={HomeScreen} />
+      <Route path="/login" exact component={LoginScreen} />
+      <Copyright />
+    </Router>
   );
 }
 

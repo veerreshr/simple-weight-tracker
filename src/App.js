@@ -1,5 +1,5 @@
+import React, { useEffect } from "react";
 import LoginScreen from "./screens/LoginScreen";
-import { useEffect } from "react";
 import firebase from "firebase/app";
 import { useStoreActions } from "easy-peasy";
 import { BrowserRouter as Router, Route } from "react-router-dom";

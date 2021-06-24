@@ -1,71 +1,81 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Logo](https://res.cloudinary.com/dcgefz04y/image/upload/v1624578016/We8_zy6tfk.svg)
 
-## Available Scripts
+    
+# Weight Tracker
 
-In the project directory, you can run:
+Simplified weight tracker with no distractions.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Badges
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
+  
+## Demo
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+https://we8-tracker.netlify.app/
 
-### `npm run build`
+  
+## Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Anonomous Firebase Login
+- Gain/Loss of Weight visualization
+- Weight changes history
+- Easy to use Interface
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  
+## Environment Variables
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To run this project, you will need to add the following environment variables to your .env file
 
-### `npm run eject`
+`REACT_APP_API_KEY`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+`REACT_APP_AUTH_DOMAIN`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+`REACT_APP_PROJECT_ID`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+`REACT_APP_STORAGE_BUCKET`
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+`REACT_APP_MESSAGING_SENDER_ID`
 
-## Learn More
+`REACT_APP_APP_ID`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+`REACT_APP_MEASUREMENT_ID`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+  
+## Run Locally
 
-### Code Splitting
+Clone the project
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+git clone https://github.com/veerreshr/simple-weight-tracker.git
+```
 
-### Analyzing the Bundle Size
+Go to the project directory
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+cd simple-weight-tracker
+```
 
-### Making a Progressive Web App
+Install dependencies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```bash
+npm install
+```
 
-### Advanced Configuration
+Start the server
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```bash
+npm run start
+```
 
-### Deployment
+  
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+[MIT](https://choosealicense.com/licenses/mit/)
 
-### `npm run build` fails to minify
+  
+## Feedback
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-"# simple-weight-tracker" 
+If you have any feedback, please reach out to us at veereshr@gmail.com

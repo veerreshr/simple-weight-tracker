@@ -4,6 +4,7 @@ import WeightTable from "../components/WeightTable";
 import WeightInput from "../components/WeightInput";
 import { useStoreActions, useStoreState } from "easy-peasy";
 import { db } from "./../firebase";
+import GridCharts from "./../components/GridCharts";
 
 const useStyles = makeStyles((theme) => ({
   center: {
@@ -39,6 +40,7 @@ function HomeScreen({ history }) {
   return (
     <div className={classes.center}>
       <WeightInput />
+      <GridCharts />
       <WeightTable />
     </div>
   );

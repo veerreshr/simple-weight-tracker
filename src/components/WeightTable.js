@@ -42,17 +42,19 @@ export default function WeightTable() {
     }
   }, [data]);
   return (
-    <MaterialTable
-      icons={tableIcons}
-      title="Weight Table"
-      columns={[
-        { title: "Weight (kg)", field: "weight" },
-        { title: "Date Time", field: "datetime", defaultSort: "desc" },
-      ]}
-      data={localData}
-      options={{
-        exportButton: true,
-      }}
-    />
+    <div style={{ margin: "0.5em" }}>
+      <MaterialTable
+        icons={tableIcons}
+        title="Weight Table"
+        columns={[
+          { title: "Weight (kg)", field: "weight" },
+          { title: "Date Time", field: "datetime", defaultSort: "desc" },
+        ]}
+        data={localData}
+        options={{
+          exportButton: true,
+        }}
+      />
+    </div>
   );
 }

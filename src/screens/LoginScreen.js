@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import Box from "@material-ui/core/Box";
 import LockOpenIcon from "@material-ui/icons/LockOpen";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
@@ -35,14 +34,12 @@ export default function LoginScreen({ history }) {
       .auth()
       .signInAnonymously()
       .then(({ user }) => {
-        // console.log(user.uid);
-        // signin(user.uid);
         history.push("/");
       })
       .catch((error) => {
         var errorCode = error.code;
         var errorMessage = error.message;
-        console.log(errorCode + " : " + errorMessage);
+        console.error(errorCode + " : " + errorMessage);
       });
   };
   useEffect(() => {

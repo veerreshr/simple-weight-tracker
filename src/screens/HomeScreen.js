@@ -15,6 +15,7 @@ function HomeScreen({ history }) {
   const uid = useStoreState((state) => state.auth.uid);
   const loggedIn = useStoreState((state) => state.auth.loggedIn);
   const updateData = useStoreActions((actions) => actions.weights.updateData);
+  const addToast = useStoreActions((actions) => actions.addToast);
   useEffect(() => {
     if (loggedIn) {
       db.collection(`/${uid}`)
@@ -31,6 +32,11 @@ function HomeScreen({ history }) {
         })
         .catch((error) => {
           console.log("Error getting documents: ", error);
+          addToast({
+            open: true,
+            message: "Error getting Entries",
+            severity: "error",
+          });
         });
     } else {
       history.push("/login");

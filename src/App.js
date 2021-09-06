@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import HomeScreen from "./screens/HomeScreen";
 import Copyright from "./components/Copyright";
+import Toast from "./components/Toast";
 
 function App() {
   const signin = useStoreActions((actions) => actions.auth.signin);
@@ -23,6 +24,7 @@ function App() {
   return (
     <Router>
       <NavBar />
+      <Toast />
       <Route path="/" exact component={HomeScreen} />
       <Route path="/login" exact component={LoginScreen} />
       <Copyright />

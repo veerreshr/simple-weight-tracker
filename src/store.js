@@ -1,4 +1,4 @@
-import { action, createStore } from "easy-peasy";
+import { action, createStore, thunk } from "easy-peasy";
 import { db } from "./firebase";
 import firebase from "firebase/app";
 
@@ -17,22 +17,32 @@ const store = createStore({
   },
   weights: {
     data: [],
-    uploadDataToFirebase: action((state, payload) => {
+    addData: action((state, payload) => {
+      state.data = [...state.data, payload];
+    }),
+    uploadDataToFirebase: thunk((actions, payload, { getStoreActions }) => {
       let datetime = firebase.firestore.Timestamp.now().toDate();
       let weight = payload.weight / 1;
-      state.data = [
-        ...state.data,
-        { weight, datetime: `${datetime}`.slice(0, 24) },
-      ];
+      actions.addData({ weight, datetime: `${datetime}`.slice(0, 24) });
       db.doc(`/${payload.uid}/${datetime}`)
         .set({
           weight,
         })
         .then((docRef) => {
           console.log(docRef);
+          getStoreActions().addToast({
+            open: true,
+            message: "Added a new Entry",
+            severity: "success",
+          });
         })
         .catch((error) => {
           console.error("Error adding document: ", error);
+          getStoreActions().addToast({
+            open: true,
+            message: "Error adding an Entry",
+            severity: "error",
+          });
         });
     }),
     updateData: action((state, payload) => {
@@ -42,5 +52,18 @@ const store = createStore({
       state.data = [];
     }),
   },
+  toast: {
+    open: false,
+    message: "",
+    severity: "",
+  },
+  addToast: action(
+    (state, payload = { open: false, message: "", severity: "" }) => {
+      state.toast = payload;
+    }
+  ),
+  removeToast: action((state, payload = false) => {
+    state.toast.open = payload;
+  }),
 });
 export default store;

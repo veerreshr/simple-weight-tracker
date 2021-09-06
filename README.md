@@ -1,10 +1,8 @@
-
-![Logo](https://res.cloudinary.com/dcgefz04y/image/upload/v1624578016/We8_zy6tfk.svg)
-
+<h1><img src="https://res.cloudinary.com/dcgefz04y/image/upload/v1624578016/We8_zy6tfk.svg" height=50/> Weight Tracker </h1>
     
-# Weight Tracker
 
 Simplified weight tracker with no distractions.
+<center><img src="https://user-images.githubusercontent.com/59141533/132148066-5ae75201-06cf-4b72-815d-c61357158949.gif" alt="screen recording"/></center>
 
 
 ## Badges
@@ -78,4 +76,4 @@ npm run start
   
 ## Feedback
 
-If you have any feedback, please reach out to us at veereshr@gmail.com
+If you have any feedback, please reach out to me at veereshr@gmail.com

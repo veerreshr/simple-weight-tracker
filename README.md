@@ -2,14 +2,18 @@
     
 
 Simplified weight tracker with no distractions.
-<center><img src="https://user-images.githubusercontent.com/59141533/132148066-5ae75201-06cf-4b72-815d-c61357158949.gif" alt="screen recording"/></center>
+
+<img src="https://user-images.githubusercontent.com/59141533/132148066-5ae75201-06cf-4b72-815d-c61357158949.gif" alt="screen recording"/>
 
 
 ## Badges
 
 
 [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
-  
+![Repo size](https://img.shields.io/github/repo-size/veerreshr/simple-weight-tracker)
+![Dependencies](https://img.shields.io/david/veerreshr/simple-weight-tracker)
+![website-up](https://img.shields.io/website?url=https%3A%2F%2Fwe8-tracker.netlify.app%2F)
+
 ## Demo
 
 https://we8-tracker.netlify.app/
@@ -67,6 +71,15 @@ Start the server
 ```bash
 npm run start
 ```
+
+
+## Roadmap
+
+- [X] Easy Interface
+- [x] Anonomous login 
+- [x] Offline data sync
+- [ ] Email and Social logins
+- [ ] Sync data between annonomous <--> social login or Email
 
   
 ## License
